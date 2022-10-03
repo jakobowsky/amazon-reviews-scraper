@@ -18,7 +18,7 @@ class ReviewsScraper:
         }
         self.asin = asin
         self.pages = pages
-        self.url = f'https://www.amazon.com/product-reviews/B000MTST70/ref=cm_cr_getr_d_paging_btm_prev_1?ie=UTF8&reviewerType=all_reviews&pageNumber='
+        self.url = f'https://www.amazon.com/product-reviews/{asin}/ref=cm_cr_getr_d_paging_btm_prev_1?ie=UTF8&reviewerType=all_reviews&pageNumber='
         self.session = HTMLSession()
 
     def get_reviews_from_page(self, page_content: int) -> List[dict]:
